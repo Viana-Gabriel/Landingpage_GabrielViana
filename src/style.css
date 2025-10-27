@@ -2,14 +2,33 @@
 @import "tailwindcss";
 
 @theme {
-
   /* Fonte do Projeto */
   --font-roboto: "Roboto", sans-serif; 
 
   /* Cores do projeto*/
-  --color-*: initial;
   --color-white-blue: #E8F0FF;
   --color-white-ice: #F9FAFB;
   --color-blue:#0056B3;
   --color-blue-destaque:#002855;
+  --color-black-text:;
+}
+
+/* Estilos gerais */
+
+a:hover{
+  color: var(--color-blue);
+}
+
+.navbar-scrolled {
+    background-color: rgba(255,255,255,.9)!important;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 2px 6px rgba(0,0,0,.1)
+}
+
+.footer-rodape p,.navbar-scrolled .nav-link,.trabalhar .swiper-slide-active h5,.trabalhar .swiper-slide-active p {
+    color: var(--text-color)
+}
+
+.navbar-scrolled .navbar-brand,.navbar-scrolled .navbar-brand p {
+    color: var(--text-color)!important
 }

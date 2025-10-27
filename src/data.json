@@ -1,0 +1,24 @@
+{
+  "beneficios": [
+    {
+      "id": 1,
+      "title": "Alta Performance",
+      "description": "Páginas rápidas, leves e com excelente tempo de carregamento."
+    },
+    {
+      "id": 2,
+      "title": " SEO Otimizado",
+      "description": "Estrutura pensada para destacar seu site nos mecanismos de busca."
+    },
+    {
+      "id": 3,
+      "title": "Desenvolvimento Profissional",
+      "description": "Código limpo, design responsivo e experiência de navegação fluida."
+    },
+    {
+      "id": 4,
+      "title": " Design Estratégico",
+      "description": "Layout pensado para converter visitantes em clientes."
+    }
+  ]
+}
