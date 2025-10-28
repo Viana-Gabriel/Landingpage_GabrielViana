@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
               breakpoints: {
                 0: { slidesPerView: 1, centeredSlides: false },
                 768: { slidesPerView: 2, centeredSlides: true },
-                1024: { slidesPerView: 3, centeredSlides: true },
+                1200: { slidesPerView: 3, centeredSlides: true },
               },
             });
           };
