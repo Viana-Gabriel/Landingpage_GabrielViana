@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
               spaceBetween: 40,
               centeredSlides: true,
               loop: true,
-              loopedSlides: 2,
+              loopedSlides: 1,
               speed: 1000,
               autoplay: {
                 delay: 3000,
@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
               breakpoints: {
                 0: { slidesPerView: 1, centeredSlides: false },
                 768: { slidesPerView: 2, centeredSlides: true },
-                1200: { slidesPerView: 3, centeredSlides: true },
+                1024: { slidesPerView: 3, centeredSlides: true },
               },
             });
           };
