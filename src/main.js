@@ -31,16 +31,16 @@ document.addEventListener("DOMContentLoaded", function () {
               spaceBetween: 40,
               centeredSlides: true,
               loop: true,
-              loopedSlides: 1,
+              loopedSlides: 2,
               speed: 1000,
               autoplay: {
                 delay: 3000,
                 disableOnInteraction: false,
               },
               breakpoints: {
-                0: { slidesPerView: 1, centeredSlides: false },
-                768: { slidesPerView: 2, centeredSlides: true },
-                1024: { slidesPerView: 3, centeredSlides: true },
+                0: { slidesPerView: 1},
+                768: { slidesPerView: 2},
+                1024: { slidesPerView: 3}
               },
             });
           };
