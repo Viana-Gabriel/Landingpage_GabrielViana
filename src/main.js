@@ -38,8 +38,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   const beneficios = data.beneficios
+  const beneficiosContainer  = document.getElementById('beneficios_container')
 
-  beneficios.forEach(beneficio =>{
-    console.log(beneficio)
+  beneficios.forEach( beneficio => {
+    beneficiosContainer.innerHTML += `
+       <div class="bg-white-ice p-6 rounded-lg shadow text-center">
+        <div class="bg-blue text-white-ice w-[70px] h-[70px] mx-auto rounded-full flex items-center justify-center mb-4">
+          <img src="/assets/icons/beneficios/0${beneficio.id}.svg" alt="Icone ${beneficio.title}" loading = "lazy">
+        </div>
+        <h3 class="font-semibold text-lg mb-2">${beneficio.title}</h3>
+        <p class="text-black-text text-sm">${beneficio.description}</p>
+      </div>
+    `
   })
+  
 });

@@ -1,34 +1,84 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import "tailwindcss";
 
-@theme {
-  /* Fonte do Projeto */
-  --font-roboto: "Roboto", sans-serif; 
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
-  /* Cores do projeto*/
+@theme {
+  /* Fontes */
+  --font-roboto: "Roboto", sans-serif;
+
+  /* Cores personalizadas */
   --color-white-blue: #E8F0FF;
   --color-white-ice: #F9FAFB;
-  --color-blue:#0056B3;
-  --color-blue-destaque:#002855;
-  --color-black-text:;
+  --color-blue: #0056B3;
+  --color-blue-destaque: #002855;
+  --color-black-text: #000000;
+
+  /* Breakpoints personalizados */
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-2xl: 1400px;
 }
 
-/* Estilos gerais */
-
-a:hover{
+/* Estilos extras */
+header a:hover {
   color: var(--color-blue);
 }
 
 .navbar-scrolled {
-    background-color: rgba(255,255,255,.9)!important;
-    backdrop-filter: blur(6px);
-    box-shadow: 0 2px 6px rgba(0,0,0,.1)
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-.footer-rodape p,.navbar-scrolled .nav-link,.trabalhar .swiper-slide-active h5,.trabalhar .swiper-slide-active p {
-    color: var(--text-color)
+.footer-rodape p,
+.navbar-scrolled .nav-link,
+.trabalhar .swiper-slide-active h5,
+.trabalhar .swiper-slide-active p {
+  color: var(--text-color);
 }
 
-.navbar-scrolled .navbar-brand,.navbar-scrolled .navbar-brand p {
-    color: var(--text-color)!important
+.navbar-scrolled .navbar-brand,
+.navbar-scrolled .navbar-brand p {
+  color: var(--text-color) !important;
+}
+
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 15px;
+    z-index: 1000;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #25d366;
+    box-shadow: 0 4px 6px rgba(0,0,0,.2);
+    transition: transform .2s;
+    animation: 2s infinite destaque !important;
+}
+
+.whatsapp-button i {
+    font-size: 35px;
+    color: var(--white-color)
+}
+
+@keyframes destaque{
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(37,211,102,.7)
+    }
+
+    70% {
+        transform: scale(1.1);
+        box-shadow: 0 0 0 10px rgba(37,211,102,0)
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(37,211,102,0)
+    }
 }
