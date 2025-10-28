@@ -20,8 +20,7 @@
       "title": " Design Estratégico",
       "description": "Layout pensado para converter visitantes em clientes."
     }
-  ]
-  ,
+  ],
   "tecnologias": [
     {
       "id": 1,
@@ -29,11 +28,11 @@
     },
     {
       "id": 2,
-       "alt": "Css"
+      "alt": "Css"
     },
     {
       "id": 3,
-       "alt": "JavaScript"
+      "alt": "JavaScript"
     },
     {
       "id": 4,
@@ -55,7 +54,37 @@
       "title": " Sites Institucionais",
       "description": "  Sites institucionais que comunicam credibilidade, propósito e identidade de marca. Desenvolvidos com foco em **usabilidade e velocidade**, reforçam sua presença digital e criam uma conexão autêntica com o público. Cada projeto é estruturado para destacar o que a sua empresa tem de melhor — transmitindo profissionalismo e conquistando confiança."
     }
-   
+  ],
+  "depoimentos": [
+    {
+      "id": 1,
+      "name": "Agência Pixel Pro",
+      "comentario": "Nosso novo site ficou incrível! O design é limpo, moderno e totalmente responsivo. Desde o primeiro dia, percebemos um aumento no engajamento.\nA equipe foi super atenciosa e entregou tudo no prazo com qualidade excepcional.",
+      "avaliation": 5
+    },
+    {
+      "id": 2,
+      "name": "Studio Criativo Aurora",
+      "comentario": "Trabalhar com essa equipe foi uma experiência fantástica. Conseguiram traduzir nossa identidade visual de forma elegante e funcional.\nO desempenho do site está excelente e recebemos muitos elogios dos nossos clientes.",
+      "avaliation": 5
+    },
+    {
+      "id": 3,
+      "name": "Loja Online Vitta",
+      "comentario": "Precisávamos de uma loja leve e rápida, e o resultado foi melhor do que esperávamos. O layout ficou perfeito em todos os dispositivos.\nO suporte após a entrega também foi impecável, sempre dispostos a ajudar.",
+      "avaliation": 5
+    },
+    {
+      "id": 4,
+      "name": "Consultoria Nova Era",
+      "comentario": "A experiência foi excelente do início ao fim. O site transmite exatamente o que queríamos em termos de credibilidade e estilo.\nFicamos muito satisfeitos com o resultado e já indicamos o serviço para outros parceiros.",
+      "avaliation": 5
+    },
+    {
+      "id": 6,
+      "name": "Empresa Vision Design",
+      "comentario": "O resultado superou nossas expectativas. O site ficou elegante, rápido e com uma navegação muito intuitiva.\nA comunicação durante o processo foi excelente, e todo o projeto foi entregue com profissionalismo e atenção aos detalhes.",
+      "avaliation": 5
+    }
   ]
-
 }

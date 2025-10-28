@@ -3,6 +3,60 @@ import data from "./data.json";
 document.addEventListener("DOMContentLoaded", function () {
   console.log("DOM carregado!");
 
+  // Seleciona a seção do carousel
+  const carouselSection = document.getElementById("depoimentos");
+
+  // Cria um observer para detectar quando a seção entra na viewport
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // Cria a tag <link> do CSS dinamicamente
+          const link = document.createElement("link");
+          link.rel = "stylesheet";
+          link.href =
+            "https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css";
+          document.head.appendChild(link);
+
+          // Carrega o JS do swiper
+          const script = document.createElement("script");
+          script.src =
+            "https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js";
+          script.defer = true;
+
+          // Inicializa o Swiper só quando o script terminar de carregar
+          script.onload = () => {
+            const swiperTerapia = new Swiper(".swiper-depoimentos", {
+              slidesPerView: 3,
+              spaceBetween: 40,
+              centeredSlides: true,
+              loop: true,
+              loopedSlides: 2,
+              speed: 1000,
+              autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+              },
+              breakpoints: {
+                0: { slidesPerView: 1, centeredSlides: false },
+                768: { slidesPerView: 2, centeredSlides: true },
+                1024: { slidesPerView: 3, centeredSlides: true },
+              },
+            });
+          };
+
+          document.body.appendChild(script);
+
+          // Para de observar depois que carregou
+          observer.unobserve(carouselSection);
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+
+  observer.observe(carouselSection);
+
   /* Header */
 
   const toggleButton = document.getElementById("menu-toggle");
@@ -78,7 +132,30 @@ document.addEventListener("DOMContentLoaded", function () {
         </p>
       </div>
     </div>
-
   `;
+  });
+
+  const depoimentos = data.depoimentos;
+  const depoimentosContainer = document.getElementById("depoimentos_container");
+
+  depoimentos.forEach((depoimento) => {
+    depoimentosContainer.innerHTML += `
+        <div class="swiper-slide">
+          <div class="bg-white rounded-2xl shadow-lg p-6 max-w-md mx-auto">
+            <div class="flex items-center">
+              <div class="w-12 h-12 bg-purple-100 rounded-full mr-4"></div>
+              <div class="text-left">
+                <h4 class="font-semibold text-gray-800">${depoimento.name}</h4>
+                <div class="text-yellow-400 text-lg">
+                  ${"★".repeat(depoimento.avaliation)}
+                </div>
+              </div>
+            </div>
+            <p class="text-gray-600 text-sm leading-relaxed whitespace-pre-line">
+              ${depoimento.comentario}
+            </p>
+          </div>
+        </div>
+      `;
   });
 });
