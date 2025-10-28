@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
           script.onload = () => {
             const swiperTerapia = new Swiper(".swiper-depoimentos", {
               slidesPerView: 3,
-              spaceBetween: 40,
+              spaceBetween: 50,
               centeredSlides: true,
               loop: true,
               loopedSlides: 2,
@@ -38,9 +38,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 disableOnInteraction: false,
               },
               breakpoints: {
-                0: { slidesPerView: 1},
-                768: { slidesPerView: 2},
-                1024: { slidesPerView: 3}
+                0: { slidesPerView: 1, centeredSlides: false },
+                768: { slidesPerView: 2, centeredSlides: true },
+                992: { slidesPerView: 3, centeredSlides: true },
               },
             });
           };
