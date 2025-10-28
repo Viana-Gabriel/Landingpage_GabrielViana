@@ -25,7 +25,7 @@
     <header class="fixed w-full top-0 z-50 p-4" id="navbar">
       <nav class="container flex flex-col lg:flex-row lg:items-center mx-auto">
         <!-- Topo: Logo + Botão -->
-        <div class="flex items-center justify-between w-full">
+        <div class=" flex items-center justify-between w-full lg:w-[30%]">
           <a href="#" class="flex items-center"> Gabriel Viana Santos </a>
 
           <!-- Botão Mobile -->
@@ -49,12 +49,12 @@
         <!-- Menu (links) -->
         <ul
           id="menu"
-          class="hidden flex-col lg:flex lg:flex-row lg:items-center lg:justify-end gap-16 w-full mt-4 lg:mt-0"
+          class="hidden flex-col lg:flex lg:flex-row lg:items-center lg:justify-end gap-10 w-full mt-4 lg:mt-0"
         >
-          <li><a href="#">Product</a></li>
-          <li><a href="#">Features</a></li>
-          <li><a href="#">Marketplace</a></li>
-          <li><a href="#">Company</a></li>
+          <li><a href="#">Sobre mim</a></li>
+          <li><a href="#">Depoimentos</a></li>
+          <li><a href="#">Perguntas frequentes</a></li>
+          <li><a href="#" class="btn-personalizado">Fazer Orçamento</a></li>
         </ul>
       </nav>
     </header>
@@ -64,20 +64,21 @@
           class="container mx-auto px-4 flex flex-col-reverse lg:flex-row items-center lg:justify-between gap-8"
         >
           <!-- Texto -->
-          <div class="w-full lg:w-1/2 text-center md:text-left">
+          <div class="w-full lg:w-1/2 text-center lg:text-left">
             <h1 class="text-3xl lg:text-[2.7rem] font-medium  text-black-text ">
               Sua presença digital começa com uma
               <span class="text-blue"> página que converte.</span>
             </h1>
-            <p class=" text-[1.3rem] mt-4 text-black-text lg:w-[80%]">
+            <p class="text-[1.3rem] mt-4 text-black-text lg:w-[80%]">
               Landing pages e sites institucionais com design moderno,
               performance de ponta e foco em resultados reais.
             </p>
-            <button
-              class="mt-14 px-6 py-3 bg-blue text-white font-semibold rounded-lg hover:bg-blue-destaque transition"
+            <a
+              class="mt-10 btn-personalizado"
+              href="#"
             >
               Começar meu projeto
-            </button>
+          </a>
           </div>
 
           <!-- Imagem -->
@@ -97,6 +98,74 @@
           </div>
         </div>
       </section>
+      <section id="sobre" class="bg-white py-16 px-4 ">
+        <div class="  container grid grid-cols-1 lg:grid-cols-2 items-center mx-auto text-[1.2rem] gap-10">
+          <div class="flex justify-center lg:justify-start">
+            <div class="relative w-100 lg:w-[450px] h-[350px]">
+              <img
+              src="/assets/images/sobre.png"
+              alt="Foto Gabriel Viana Santos"
+              class="absolute rounded-2xl sobre_image"
+              loading="lazy"
+            />
+            </div>
+          </div>
+
+          <!-- Texto à direita -->
+          <div class="text-center lg:text-left text-black-text">
+            <h2 class="text-2xl font-bold mb-4  text-black-text">Sobre mim</h2>
+
+            <p class="mb-4 leading-relaxed">
+              Me chamo <strong>Gabriel Viana Santos</strong>, desenvolvedor que transforma ideias em páginas que vendem.
+            </p>
+
+            <p class="mb-4 leading-relaxed">
+              Desenvolvo landing pages e sites institucionais que unem velocidade, estética e estratégia, ajudando negócios a se destacarem online e conquistarem mais clientes.
+            </p>
+
+            <p class="mb-6 leading-relaxed">
+              Utilizo tecnologias modernas e práticas de desenvolvimento que garantem uma navegação fluida.  
+              <span class="block mt-2 font-medium text-black-text">Sendo elas:</span>
+            </p>
+
+            <!-- Container para tecnologias -->
+            <div
+              id="tecnologias_container"
+              class="flex gap-6 mb-8 justify-center lg:justify-start"
+            ></div>
+
+            <!-- Botão -->
+            <a
+              href="#"
+              class="btn-personalizado hover:bg-blue-800 transition-colors duration-200"
+            >
+              Solicitar meu site agora
+            </a>
+          </div>
+        </div>
+      </section>
+      <section id="servicos" class="bg-blue-50 py-16 px-6 md:px-16">
+        <div class="container mx-auto text-center">
+          <h2 class="text-2xl font-bold text-gray-900 mb-2">Serviços Oferecidos</h2>
+          <p class="text-gray-700 mb-10">
+            Desenvolvimento de soluções digitais personalizadas com foco em design, performance e resultados reais.
+          </p>
+
+          <!-- Container onde os cards serão injetados -->
+          <div id="servicos_container" class="grid grid-cols-1 md:grid-cols-2 gap-8 justify-center"></div>
+
+          <p class="text-gray-700 mt-10 mb-8">
+            Cada projeto é criado com atenção aos detalhes, design inteligente e código otimizado — tudo para fortalecer a sua marca e aumentar seus resultados online.
+          </p>
+
+          <button
+            class="bg-blue-700 hover:bg-blue-800 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200"
+          >
+            Solicitar meu site agora
+          </button>
+        </div>
+      </section>
+
       <a href="https://api.whatsapp.com/send/?phone=5511963816799&amp;text&amp;type=phone_number&amp;app_absent=0" target="_blank" class="whatsapp-button" aria-label="Botao WhatsApp">
         <img src="/assets/icons/whatsapp.webp" alt="" height="34" width="34" loading="lazy">
       </a>

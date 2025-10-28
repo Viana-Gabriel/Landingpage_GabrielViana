@@ -21,4 +21,41 @@
       "description": "Layout pensado para converter visitantes em clientes."
     }
   ]
+  ,
+  "tecnologias": [
+    {
+      "id": 1,
+      "alt": "Html"
+    },
+    {
+      "id": 2,
+       "alt": "Css"
+    },
+    {
+      "id": 3,
+       "alt": "JavaScript"
+    },
+    {
+      "id": 4,
+      "alt": "Tailwind"
+    },
+    {
+      "id": 5,
+      "alt": "Boostrap"
+    }
+  ],
+  "servicos": [
+    {
+      "id": 1,
+      "title": "Landing Pages",
+      "description": "Landing pages projetadas estrategicamente para gerar resultados concretos. Cada elemento — do layout à chamada para ação — é pensado para capturar a atenção e converter visitantes em clientes. Páginas rápidas, responsivas e otimizadas para campanhas, lançamentos e anúncios que exigem **máxima performance e conversão**."
+    },
+    {
+      "id": 2,
+      "title": " Sites Institucionais",
+      "description": "  Sites institucionais que comunicam credibilidade, propósito e identidade de marca. Desenvolvidos com foco em **usabilidade e velocidade**, reforçam sua presença digital e criam uma conexão autêntica com o público. Cada projeto é estruturado para destacar o que a sua empresa tem de melhor — transmitindo profissionalismo e conquistando confiança."
+    }
+   
+  ]
+
 }

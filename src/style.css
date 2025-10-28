@@ -1,6 +1,5 @@
-@import "tailwindcss";
-
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import "tailwindcss";
 
 @theme {
   /* Fontes */
@@ -22,10 +21,6 @@
 }
 
 /* Estilos extras */
-header a:hover {
-  color: var(--color-blue);
-}
-
 .navbar-scrolled {
   background-color: rgba(255, 255, 255, 0.9) !important;
   backdrop-filter: blur(6px);
@@ -64,6 +59,22 @@ header a:hover {
 .whatsapp-button i {
     font-size: 35px;
     color: var(--white-color)
+}
+
+.btn-personalizado{
+  background: var(--color-blue);
+  padding: .8rem 2.5rem;
+  color: var(--color-white-ice);
+  font-weight: 500;
+  border-radius: .5rem;
+  display: inline-block;
+}
+
+.sobre_image{
+  position: absolute;
+  bottom:0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 @keyframes destaque{
