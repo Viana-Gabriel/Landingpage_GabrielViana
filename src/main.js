@@ -68,22 +68,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
   servicos.forEach((servico) => {
     servicosContainer.innerHTML += `
-    <div class="group relative rounded-xl overflow-hidden cursor-pointer transition-all duration-300 shadow-lg ">
-      <img 
-        src="/assets/images/servicos/0${servico.id}.webp" 
-        alt="${servico.title}" 
-        class="w-full h-96 object-cover transition-transform duration-300 group-hover:scale-105 group-active:scale-105"
-        loading = "lazy"
-      />
-      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-300"></div>
-
-      <div class="absolute inset-0 flex flex-col items-center justify-center px-4 text-white transition-all duration-300">
-        <h3 class="text-xl font-semibold mb-3">${servico.title}</h3>
-        <p class="opacity-0 group-hover:opacity-100 group-active:opacity-100 text-sm leading-relaxed transition-opacity duration-300 max-w-md">
+    <div class="relative bg-white rounded-xl overflow-hidden cursor-pointer border border-transparent transition-all duration-300 ease-in-out card-servico">
+      <img src="/assets/images/servicos/0${servico.id}.webp" alt="${servico.title}" loading="lazy">
+      <div class="card-overlay"></div>
+      <div class="absolute inset-0 flex flex-col justify-center items-center text-white p-6 transition-all duration-400 ease-in-out card-content">
+        <h3 class="text-white-ice">${servico.title}</h3>
+        <p class="text-white-ice">
           ${servico.description}
         </p>
       </div>
     </div>
+
   `;
   });
 });

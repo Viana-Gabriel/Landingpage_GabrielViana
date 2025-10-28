@@ -10,7 +10,7 @@
   --color-white-ice: #F9FAFB;
   --color-blue: #0056B3;
   --color-blue-destaque: #002855;
-  --color-black-text: #000000;
+  --color-black-text: #2A2A2A;
 
   /* Breakpoints personalizados */
   --breakpoint-sm: 576px;
@@ -70,12 +70,80 @@
   display: inline-block;
 }
 
+.btn-personalizado:hover{
+  background: var(--color-blue-destaque);
+}
+
 .sobre_image{
   position: absolute;
   bottom:0;
   left: 50%;
   transform: translateX(-50%);
 }
+
+
+.card-servico:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.card-servico img {
+  width: 100%;
+  height: 390px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.card-servico:hover img {
+  transform: scale(1.05);
+}
+
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4), transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.card-servico:hover .card-overlay {
+  opacity: 1;
+}
+
+
+.card-content h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.card-content p {
+  font-size: 1rem;
+  line-height: 1.5;
+  max-width: 450px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  text-align: center;
+}
+
+.card-servico:hover .card-content p {
+  opacity: 1;
+}
+
+.servicos-btn {
+  background-color: #1d4ed8;
+  color: white;
+  font-weight: 600;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.servicos-btn:hover {
+  background-color: #153e9f;
+}
+
 
 @keyframes destaque{
     0% {

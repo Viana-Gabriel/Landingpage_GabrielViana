@@ -21,7 +21,7 @@
 
     <link href="/src/style.css" rel="stylesheet" />
   </head>
-  <body class="bg-white-blue">
+  <body class="bg-white-blue text-black-text">
     <header class="fixed w-full top-0 z-50 p-4" id="navbar">
       <nav class="container flex flex-col lg:flex-row lg:items-center mx-auto">
         <!-- Topo: Logo + Botão -->
@@ -99,7 +99,7 @@
         </div>
       </section>
       <section id="sobre" class="bg-white py-16 px-4 ">
-        <div class="  container grid grid-cols-1 lg:grid-cols-2 items-center mx-auto text-[1.2rem] gap-10">
+        <div class=" container grid grid-cols-1 lg:grid-cols-2 items-center mx-auto text-[1.2rem] gap-10">
           <div class="flex justify-center lg:justify-start">
             <div class="relative w-100 lg:w-[450px] h-[350px]">
               <img
@@ -112,8 +112,8 @@
           </div>
 
           <!-- Texto à direita -->
-          <div class="text-center lg:text-left text-black-text">
-            <h2 class="text-2xl font-bold mb-4  text-black-text">Sobre mim</h2>
+          <div class="text-center lg:text-left">
+            <h2 class="text-2xl font-bold mb-4 ">Sobre mim</h2>
 
             <p class="mb-4 leading-relaxed">
               Me chamo <strong>Gabriel Viana Santos</strong>, desenvolvedor que transforma ideias em páginas que vendem.
@@ -125,7 +125,7 @@
 
             <p class="mb-6 leading-relaxed">
               Utilizo tecnologias modernas e práticas de desenvolvimento que garantem uma navegação fluida.  
-              <span class="block mt-2 font-medium text-black-text">Sendo elas:</span>
+              <span class="block mt-2 font-medium">Sendo elas:</span>
             </p>
 
             <!-- Container para tecnologias -->
@@ -137,7 +137,7 @@
             <!-- Botão -->
             <a
               href="#"
-              class="btn-personalizado hover:bg-blue-800 transition-colors duration-200"
+              class="btn-personalizado"
             >
               Solicitar meu site agora
             </a>
@@ -146,23 +146,24 @@
       </section>
       <section id="servicos" class="bg-blue-50 py-16 px-6 md:px-16">
         <div class="container mx-auto text-center">
-          <h2 class="text-2xl font-bold text-gray-900 mb-2">Serviços Oferecidos</h2>
-          <p class="text-gray-700 mb-10">
+          <h2 class="text-3xl font-bold mb-2">Serviços <strong class="text-blue font-bold">Oferecidos</strong></h2>
+          <p class="mb-10 text-[1.2rem] lg:w-[60%] mx-auto">
             Desenvolvimento de soluções digitais personalizadas com foco em design, performance e resultados reais.
           </p>
 
           <!-- Container onde os cards serão injetados -->
-          <div id="servicos_container" class="grid grid-cols-1 md:grid-cols-2 gap-8 justify-center"></div>
+          <div id="servicos_container" class="grid grid-cols-1 md:grid-cols-2 gap-8 justify-center my-15"></div>
 
-          <p class="text-gray-700 mt-10 mb-8">
+          <p class="mt-10 mb-8 text-[1.2rem] lg:w-[65%] mx-auto">
             Cada projeto é criado com atenção aos detalhes, design inteligente e código otimizado — tudo para fortalecer a sua marca e aumentar seus resultados online.
           </p>
 
-          <button
-            class="bg-blue-700 hover:bg-blue-800 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200"
+          <a
+            href="#"
+            class="btn-personalizado"
           >
             Solicitar meu site agora
-          </button>
+          </a>
         </div>
       </section>
 
