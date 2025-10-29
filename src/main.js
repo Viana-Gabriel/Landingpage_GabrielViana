@@ -158,4 +158,78 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
       `;
   });
+
+  const perguntas = data.perguntas;
+  const perguntasContainer = document.getElementById("perguntas_container");
+
+  perguntas.forEach((pergunta) => {
+    perguntasContainer.innerHTML += `
+        <div class="accordion border border-[#0056B3] rounded-lg overflow-hidden">
+                  <button
+                    class="accordion-header w-full flex justify-between items-center bg-blue hover:bg-blue-destaque cursor-pointer text-white font-medium px-4 py-3 transition-colors duration-300"
+                  >
+                    <span>${pergunta.question}</span>
+                    <svg
+                      class="w-5 h-5 transform transition-transform duration-300"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                    >
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+
+                  <div
+                    class="accordion-content bg-white max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-4"
+                  >
+                    <p class="py-3">
+                      ${pergunta.response}
+                    </p>
+                  </div>
+          </div>
+      `;
+  });
+
+  const accordions = document.querySelectorAll(".accordion");
+
+  accordions.forEach((accordion) => {
+    const header = accordion.querySelector(".accordion-header");
+    const content = accordion.querySelector(".accordion-content");
+    const icon = header.querySelector("svg");
+    
+
+    header.addEventListener("click", () => {
+      const isOpen = accordion.classList.contains("open");
+     
+
+      // Fecha todos os outros
+      accordions.forEach((acc) => {
+        acc.classList.remove("open");
+        acc.querySelector(".accordion-content").style.maxHeight = null;
+        acc.querySelector("svg").classList.remove("rotate-180");
+        acc.querySelector(".accordion-header").classList.remove("bg-blue-destaque");
+      });
+
+      // Se este não estava aberto, abre agora
+      if (!isOpen) {
+        accordion.classList.add("open");
+        content.style.maxHeight = content.scrollHeight + "px";
+        icon.classList.add("rotate-180");
+        header.classList.add("bg-blue-destaque")
+      } else {
+        accordion.classList.remove("open");
+        content.style.maxHeight = null;
+        icon.classList.remove("rotate-180");
+        header.classList.remove("bg-blue-destaque")
+      }
+    });
+  });
+
+   // Serve para deixar o ano dinamico no rodapé
+
+  const labelAno = document.querySelector("#ano");
+  const anoAtual = new Date().getFullYear();
+
+  labelAno.innerText = anoAtual;
 });

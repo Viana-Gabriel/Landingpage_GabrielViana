@@ -17,11 +17,12 @@
     />
 
     <link rel="preload" fetchpriority="high" as="image" href="/assets/images/banner.webp" type="image/webp" >
+
     <link href="/src/style.css" rel="stylesheet" />
   </head>
   <body class="bg-white-blue text-black-text">
     <header class="fixed w-full top-0 z-50 p-4" id="navbar">
-      <nav class="container flex flex-col lg:flex-row lg:items-center mx-auto">
+      <nav class="max-w-7xl flex flex-col lg:flex-row lg:items-center mx-auto">
         <!-- Topo: Logo + Botão -->
         <div class=" flex items-center justify-between w-full lg:w-[30%]">
           <a href="#" class="flex items-center"> Gabriel Viana Santos </a>
@@ -57,9 +58,9 @@
       </nav>
     </header>
     <main>
-      <section class="bg-white-ice py-28" id="banner">
+      <section class="bg-white-ice py-28 px-6 md:px-16" id="banner ">
         <div
-          class="container mx-auto px-4 flex flex-col-reverse lg:flex-row items-center lg:justify-between gap-8"
+          class="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center lg:justify-between gap-8"
         >
           <!-- Texto -->
           <div class="w-full lg:w-1/2 text-center lg:text-left">
@@ -90,14 +91,14 @@
         </div>
       </section>
       <section class="py-16 px-4" id="beneficios">
-        <div class="container mx-auto ">
+        <div class="max-w-7xl mx-auto ">
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="beneficios_container">
             <!-- Beneficios renderizados via js -->
           </div>
         </div>
       </section>
-      <section id="sobre" class="bg-white py-16 px-4 ">
-        <div class=" container grid grid-cols-1 lg:grid-cols-2 items-center mx-auto text-[1.2rem] gap-10">
+      <section id="sobre" class="bg-white py-16 px-6 md:px-16">
+        <div class="max-w-7xl grid grid-cols-1 lg:grid-cols-2 items-center mx-auto text-[1.2rem] gap-10">
           <div class="flex justify-center lg:justify-start">
             <div class="relative w-100 lg:w-[450px] h-[350px]">
               <img
@@ -143,7 +144,7 @@
         </div>
       </section>
       <section id="servicos" class="py-16 px-6 md:px-16">
-        <div class="container mx-auto text-center">
+        <div class="max-w-7xl mx-auto text-center">
           <h2 class="text-3xl font-bold mb-2">Serviços <strong class="text-blue font-bold">Oferecidos</strong></h2>
           <p class="mb-10 text-[1.2rem] lg:w-[60%] mx-auto">
             Desenvolvimento de soluções digitais personalizadas com foco em design, performance e resultados reais.
@@ -165,11 +166,10 @@
         </div>
       </section>
 
-      <section class="bg-white-ice py-16 px-6 md:px-16" id="depoimentos">
-        <div class="container mx-auto text-center ">
-          <h2 class="text-2xl lg:text-3xl font-bold text-gray-800 mb-8">
-            O que dizem os clientes que já transformaram suas ideias<br />
-            em  <strong class="text-blue font-bold">resultados</strong>.
+      <section class=" py-16 px-6 md:px-16" id="depoimentos">
+        <div class="max-w-7xl mx-auto text-center ">
+          <h2 class="text-2xl lg:text-3xl font-bold text-gray-800 mb-8 lg:w-[70%] mx-auto">
+            O que dizem os clientes que já transformaram suas ideias em  <strong class="text-blue font-bold">resultados</strong>.
           </h2>
           <!-- Swiper container -->
           <div class="swiper swiper-depoimentos w-full px-6">
@@ -183,17 +183,94 @@
           
         </div>
       </section>
-      
-  
+      <section class="bg-white-ice py-16 px-6 md:px-16">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 text-center lg:text-left">
+          <!-- 🖼️ Imagem -->
+          <div class="flex justify-center lg:justify-start">
+            <img
+              src="/assets/images/faq.png"
+              alt="Ilustração de FAQ"
+              class="w-full max-w-md "
+              loading="lazy"
+            />
+          </div>
 
-
-      <a href="https://api.whatsapp.com/send/?phone=5511963816799&amp;text&amp;type=phone_number&amp;app_absent=0" target="_blank" class="whatsapp-button" aria-label="Botao WhatsApp">
-        <img src="/assets/icons/whatsapp.webp" alt="" height="34" width="34" loading="lazy">
-      </a>
+          <!-- 💬 FAQ -->
+          <div>
+            <h2 class="text-2xl lg:text-3xl font-bold mb-2">
+              Dúvidas Frequentes
+            </h2>
+            <p class="mb-8">
+              Tudo o que você precisa saber antes de começar sua jornada.
+            </p>
+            <div class="space-y-3" id="perguntas_container">
+              <!-- Accordions gerados a partir de script -->
+            </div>
+            <a
+              class="mt-10 btn-personalizado"
+              href="#"
+            >
+              Começar meu projeto
+          </a>
+        </div>
+      </section>
     </main>
-    <footer>
-      <!-- Rodapé do projeto -->
+    <footer class="bg-[#001F3F] text-white-ice py-10 px-6 md:px-12">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 text-center lg:text-left">
+        <!-- Lado esquerdo -->
+        <div>
+          <h2 class="text-2xl font-semibold mb-3">Gabriel Viana Santos | Desenvolvedor</h2>
+          <p class=" text-[1.2rem] text-white-ice mb-4">
+            Transforme suas ideias em experiências digitais que encantam e convertem.
+          </p>
+        </div>
+
+        <!-- Lado direito -->
+        <div class="flex flex-col items-center lg:items-end">
+          <h3 class="text-2xl font-semibold  mb-2">Contatos</h3>
+          <div class="flex items-center gap-5 mb-6">
+            <!--   Github 
+            <a
+              href="https://github.com/Viana-Gabriel"
+              target="_blank"
+              aria-label="Github"
+            >
+              <img src="/assets/icons/github.svg" alt="Icone Github" loading="lazy">
+              
+            </a> -->
+
+            <!-- WhatsApp -->
+            <a
+              href="https://api.whatsapp.com/send/?phone=5511963816799&amp;text&amp;type=phone_number&amp;app_absent=0"
+              target="_blank"
+              aria-label="WhatsApp"
+            >
+              <img src="/assets/icons/whatsapp.svg" alt="Icone Whatsapp" loading="lazy">
+            </a>
+
+            <!-- Email -->
+            <a
+              href="mailto:vianadevweb@gmail.com"
+              aria-label="E-mail"
+            >
+              <img src="/assets/icons/email.svg" alt="Icone Email" loading="lazy">
+            </a>
+          </div>
+
+          <h3 class="text-[1.1rem] font-semibold mb-1">Horário de Atendimento</h3>
+          <p class=" text-white-ice mt-2">seg a sex das 09h00 às 18h00</p>
+        </div>
+      </div>
+
+      <div class="border-t border-[#F9FAFB]/10 mt-8 pt-4 text-center text-white-ice">
+        © <span id="ano"></span> Gabriel Viana Santos. Todos os direitos reservados.
+      </div>
     </footer>
+
+      
+    <a href="https://api.whatsapp.com/send/?phone=5511963816799&amp;text&amp;type=phone_number&amp;app_absent=0" target="_blank" class="whatsapp-button" aria-label="Botao WhatsApp">
+      <img src="/assets/icons/whatsapp.svg" alt="" height="34" width="34" loading="lazy">
+    </a>
     <script src="/src/main.js" type="module" defer></script>
 
   </body>

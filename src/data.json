@@ -86,5 +86,32 @@
       "comentario": "O resultado superou nossas expectativas. O site ficou elegante, rápido e com uma navegação muito intuitiva.\nA comunicação durante o processo foi excelente, e todo o projeto foi entregue com profissionalismo e atenção aos detalhes.",
       "avaliation": 5
     }
+  ],
+  "perguntas": [
+    {
+      "id": 1,
+      "question": "Quanto tempo leva para criar uma landing page ou site institucional?",
+      "response": "O prazo médio é de 7 a 15 dias úteis, dependendo da complexidade do projeto e do tempo de aprovação de cada etapa."
+    },
+    {
+      "id": 2,
+      "question": "Posso solicitar alterações depois que o site estiver pronto?",
+      "response": "Sim! Após a entrega do site, você pode solicitar ajustes e pequenas alterações. Oferecemos um período de revisão gratuito para garantir sua satisfação."
+    },
+    {
+      "id": 3,
+      "question": "O site será responsivo e compatível com dispositivos móveis?",
+      "response": "Sim, todos os nossos sites são desenvolvidos com foco em design responsivo, garantindo que funcionem perfeitamente em celulares, tablets e desktops."
+    },
+    {
+      "id": 4,
+      "question": "Vocês oferecem suporte ou manutenção após a entrega do site?",
+      "response": "Sim, oferecemos planos opcionais de suporte e manutenção para atualizações, melhorias de desempenho e suporte técnico contínuo."
+    },
+    {
+      "id": 5,
+      "question": "Que informações eu preciso fornecer para que o site seja desenvolvido?",
+      "response": "Precisamos de informações sobre sua marca, serviços, conteúdo, identidade visual e objetivos do projeto para garantir que o site atenda às suas expectativas."
+    }
   ]
 }
