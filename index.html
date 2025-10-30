@@ -8,15 +8,19 @@
       content="Aumente suas vendas com landing pages e sites institucionais profissionais, rápidos e otimizados para gerar resultados e destacar sua marca."
     />
 
-    <title>Gabriel Viana Santos | Desenvolvedor</title>
+    <title>Gabriel Viana | Desenvolvedor</title>
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="/assets/logo - Gabriel Viana.png"
+      href="/assets/logo-Gabriel_Viana_sem_fundo"
     />
 
     <link rel="preload" fetchpriority="high" as="image" href="/assets/images/banner.webp" type="image/webp" >
+    <link rel="preload" href="/assets/icons/beneficios/01-destaque.svg" as="image">
+    <link rel="preload" href="/assets/icons/beneficios/02-destaque.svg" as="image">
+    <link rel="preload" href="/assets/icons/beneficios/03-destaque.svg" as="image">
+    <link rel="preload" href="/assets/icons/beneficios/04-destaque.svg" as="image">
 
     <link href="/src/style.css" rel="stylesheet" />
   </head>
@@ -25,7 +29,7 @@
       <nav class="max-w-7xl flex flex-col lg:flex-row lg:items-center mx-auto">
         <!-- Topo: Logo + Botão -->
         <div class=" flex items-center justify-between w-full lg:w-[30%]">
-          <a href="#" class="flex items-center"> Gabriel Viana Santos </a>
+          <a href="#" class="flex items-center gap-2 text-2xl font-semibold"> Gabriel Viana </a>
 
           <!-- Botão Mobile -->
           <button id="menu-toggle" class="lg:hidden p-2" aria-label="Abrir Menu">
@@ -48,17 +52,17 @@
         <!-- Menu (links) -->
         <ul
           id="menu"
-          class="hidden flex-col lg:flex lg:flex-row lg:items-center lg:justify-end gap-10 w-full mt-4 lg:mt-0"
+          class="hidden flex-col lg:flex lg:flex-row lg:items-center lg:justify-end gap-10 w-full mt-4 lg:mt-0 text-[1.1rem]"
         >
-          <li><a href="#">Sobre mim</a></li>
-          <li><a href="#">Depoimentos</a></li>
-          <li><a href="#">Perguntas frequentes</a></li>
-          <li><a href="#" class="btn-personalizado">Fazer Orçamento</a></li>
+          <li class="mt-4 lg:mt-0"><a href="#sobre">Sobre mim</a></li>
+          <li class="mt-4 lg:mt-0"><a href="#depoimentos">Depoimentos</a></li>
+          <li class="mt-4 lg:mt-0"><a href="#fac">Perguntas frequentes</a></li>
+          <li class="mt-4 lg:mt-0"><a href="https://api.whatsapp.com/send/?phone=5511963816799&amp;text&amp;type=phone_number&amp;app_absent=0" target="_blank" aria-label="Botao WhatsApp" class="btn-personalizado w-[100%] text-center">Fazer Orçamento</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <section class="bg-white-ice py-28 px-6 md:px-16" id="banner ">
+      <section class="bg-white-ice py-28 px-4 md:px-16" id="banner ">
         <div
           class="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center lg:justify-between gap-8"
         >
@@ -74,7 +78,7 @@
             </p>
             <a
               class="mt-10 btn-personalizado"
-              href="#"
+              href="https://api.whatsapp.com/send/?phone=5511963816799&amp;text&amp;type=phone_number&amp;app_absent=0" target="_blank" aria-label="Botao WhatsApp"
             >
               Começar meu projeto
           </a>
@@ -97,7 +101,7 @@
           </div>
         </div>
       </section>
-      <section id="sobre" class="bg-white py-16 px-6 md:px-16">
+      <section id="sobre" class="bg-white py-16 px-4 md:px-16">
         <div class="max-w-7xl grid grid-cols-1 lg:grid-cols-2 items-center mx-auto text-[1.2rem] gap-10">
           <div class="flex justify-center lg:justify-start">
             <div class="relative w-100 lg:w-[450px] h-[350px]">
@@ -135,7 +139,7 @@
 
             <!-- Botão -->
             <a
-              href="#"
+              href="https://api.whatsapp.com/send/?phone=5511963816799&amp;text&amp;type=phone_number&amp;app_absent=0" target="_blank" aria-label="Botao WhatsApp"
               class="btn-personalizado"
             >
               Solicitar meu site agora
@@ -143,7 +147,7 @@
           </div>
         </div>
       </section>
-      <section id="servicos" class="py-16 px-6 md:px-16">
+      <section id="servicos" class="py-16 px-4 md:px-16">
         <div class="max-w-7xl mx-auto text-center">
           <h2 class="text-3xl font-bold mb-2">Serviços <strong class="text-blue font-bold">Oferecidos</strong></h2>
           <p class="mb-10 text-[1.2rem] lg:w-[60%] mx-auto">
@@ -158,7 +162,7 @@
           </p>
 
           <a
-            href="#"
+            href="https://api.whatsapp.com/send/?phone=5511963816799&amp;text&amp;type=phone_number&amp;app_absent=0" target="_blank" aria-label="Botao WhatsApp"
             class="btn-personalizado"
           >
             Solicitar meu site agora
@@ -166,13 +170,13 @@
         </div>
       </section>
 
-      <section class=" py-16 px-6 md:px-16" id="depoimentos">
+      <section class=" py-16 px-4 md:px-16" id="depoimentos">
         <div class="max-w-7xl mx-auto text-center ">
           <h2 class="text-2xl lg:text-3xl font-bold text-gray-800 mb-8 lg:w-[70%] mx-auto">
             O que dizem os clientes que já transformaram suas ideias em  <strong class="text-blue font-bold">resultados</strong>.
           </h2>
           <!-- Swiper container -->
-          <div class="swiper swiper-depoimentos w-full px-6">
+          <div class="swiper swiper-depoimentos w-full px-4">
             <div class="swiper-wrapper" id="depoimentos_container">
               <!-- Slides serão renderizados aqui -->
             </div>
@@ -183,7 +187,7 @@
           
         </div>
       </section>
-      <section class="bg-white-ice py-16 px-6 md:px-16">
+      <section class="bg-white-ice py-16 px-4 md:px-16" id="fac">
         <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 text-center lg:text-left">
           <!-- 🖼️ Imagem -->
           <div class="flex justify-center lg:justify-start">
@@ -208,18 +212,18 @@
             </div>
             <a
               class="mt-10 btn-personalizado"
-              href="#"
+             href="https://api.whatsapp.com/send/?phone=5511963816799&amp;text&amp;type=phone_number&amp;app_absent=0" target="_blank" aria-label="Botao WhatsApp"
             >
               Começar meu projeto
           </a>
         </div>
       </section>
     </main>
-    <footer class="bg-[#001F3F] text-white-ice py-10 px-6 md:px-12">
+    <footer class="bg-[#001F3F] text-white-ice py-10 px-4 md:px-12">
       <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 text-center lg:text-left">
         <!-- Lado esquerdo -->
         <div>
-          <h2 class="text-2xl font-semibold mb-3">Gabriel Viana Santos | Desenvolvedor</h2>
+          <h2 class="text-2xl font-semibold mb-3">Gabriel Viana | Desenvolvedor</h2>
           <p class=" text-[1.2rem] text-white-ice mb-4">
             Transforme suas ideias em experiências digitais que encantam e convertem.
           </p>
@@ -263,14 +267,19 @@
       </div>
 
       <div class="border-t border-[#F9FAFB]/10 mt-8 pt-4 text-center text-white-ice">
-        © <span id="ano"></span> Gabriel Viana Santos. Todos os direitos reservados.
+        © <span id="ano"></span> Gabriel Viana. Todos os direitos reservados.
       </div>
     </footer>
 
       
-    <a href="https://api.whatsapp.com/send/?phone=5511963816799&amp;text&amp;type=phone_number&amp;app_absent=0" target="_blank" class="whatsapp-button" aria-label="Botao WhatsApp">
+    <a href="https://api.whatsapp.com/send/?phone=5511963816799&amp;text&amp;type=phone_number&amp;app_absent=0" target="_blank" aria-label="Botao WhatsApp" class="whatsapp-button" >
       <img src="/assets/icons/whatsapp.svg" alt="" height="34" width="34" loading="lazy">
     </a>
+
+    <div
+  id="menu-overlay"
+  class="fixed inset-0 bg-black/50 hidden opacity-0 transition-opacity duration-300 z-40"
+></div>
     <script src="/src/main.js" type="module" defer></script>
 
   </body>

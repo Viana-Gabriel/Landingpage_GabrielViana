@@ -6,11 +6,11 @@
   --font-roboto: "Roboto", sans-serif;
 
   /* Cores personalizadas */
-  --color-white-blue: #E8F0FF;
-  --color-white-ice: #F9FAFB;
-  --color-blue: #0056B3;
+  --color-white-blue: #e8f0ff;
+  --color-white-ice: #f9fafb;
+  --color-blue: #0056b3;
   --color-blue-destaque: #002855;
-  --color-black-text: #2A2A2A;
+  --color-black-text: #2a2a2a;
 
   /* Breakpoints personalizados */
   --breakpoint-sm: 576px;
@@ -20,6 +20,9 @@
   --breakpoint-2xl: 1400px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 /* Estilos extras */
 .navbar-scrolled {
   background-color: rgba(255, 255, 255, 0.9) !important;
@@ -40,52 +43,71 @@
 }
 
 .whatsapp-button {
-    position: fixed;
-    bottom: 20px;
-    right: 15px;
-    z-index: 1000;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #25d366;
-    box-shadow: 0 4px 6px rgba(0,0,0,.2);
-    transition: transform .2s;
-    animation: 2s infinite destaque !important;
+  position: fixed;
+  bottom: 20px;
+  right: 15px;
+  z-index: 1000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #25d366;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+  animation: 2s infinite destaque !important;
 }
 
 .whatsapp-button i {
-    font-size: 35px;
-    color: var(--white-color)
+  font-size: 35px;
+  color: var(--white-color);
 }
-
-.btn-personalizado{
+.btn-personalizado {
+  text-align: center;
+  font-size: 1.1rem;
+  position: relative; /* necessário pro ::before funcionar */
   background: var(--color-blue);
-  padding: .8rem 2.5rem;
+  padding: 0.9rem 2.5rem;
   color: var(--color-white-ice);
   font-weight: 500;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   display: inline-block;
+  overflow: hidden;
+  width: 100%; /* evita o brilho sair pra fora */
 }
 
-.btn-personalizado:hover{
+.btn-personalizado::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  transform: skewX(-20deg);
+  animation: shine 1.7s infinite;
+}
+
+.btn-personalizado:hover {
   background: var(--color-blue-destaque);
 }
 
-.sobre_image{
+.sobre_image {
   position: absolute;
-  bottom:0;
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
 }
 
-
 .card-servico:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
-
 
 .card-servico img {
   width: 100%;
@@ -101,7 +123,12 @@
 .card-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4), transparent);
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.4),
+    transparent
+  );
   opacity: 0;
   transition: opacity 0.4s ease;
 }
@@ -109,7 +136,6 @@
 .card-servico:hover .card-overlay {
   opacity: 1;
 }
-
 
 .card-content h3 {
   font-size: 1.3rem;
@@ -121,67 +147,84 @@
   font-size: 1rem;
   line-height: 1.5;
   max-width: 450px;
-  display:none ;
+  display: none;
   transition: opacity 0.4s ease;
   text-align: center;
 }
 
 .card-servico:hover .card-content p {
- display: block;
-}
-
-.servicos-btn {
-  background-color: #1d4ed8;
-  color: white;
-  font-weight: 600;
-  border: none;
-  padding: 0.8rem 1.5rem;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.servicos-btn:hover {
-  background-color: #153e9f;
+  display: block;
 }
 
 #depoimentos .swiper {
-    padding: 2rem 2rem 60px ;
-    height: auto;
-    overflow-y: visible
+  padding: 2rem 2rem 60px;
+  height: auto;
+  overflow-y: visible;
 }
 
 #depoimentos.swiper-wrapper {
-    overflow: visible
+  overflow: visible;
 }
 #depoimentos .swiper-slide-active {
-    transform: scale(1.1)
+  transform: scale(1.1);
 }
 
-
-@media screen and (min-width:1100px){
-  #servicos_container{
-  background: url('/assets/images/servicos/fundo.png') no-repeat;
-  background-size: contain;
-  background-position: center;
-  padding: 2rem;
-}
-  
+#sobre {
+  scroll-margin-top: 130px;
 }
 
-@keyframes destaque{
-    0% {
-        transform: scale(1);
-        box-shadow: 0 0 0 0 rgba(37,211,102,.7)
-    }
+#fac,
+#depoimentos {
+  scroll-margin-top: 60px;
+}
 
-    70% {
-        transform: scale(1.1);
-        box-shadow: 0 0 0 10px rgba(37,211,102,0)
-    }
+.text-outline {
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.6), 0 0 6px rgba(0, 0, 0, 0.4);
+  letter-spacing: 0.2rem;
+}
 
-    100% {
-        transform: scale(1);
-        box-shadow: 0 0 0 0 rgba(37,211,102,0)
-    }
+@media screen and (min-width: 1100px) {
+  #servicos_container {
+    background: url("/assets/images/servicos/fundo.png") no-repeat;
+    background-size: contain;
+    background-position: center;
+    padding: 2rem;
+  }
+}
+
+@media screen and (min-width: 968px) {
+  .btn-personalizado {
+    text-align: center;
+    width: 70%;
+  }
+  header .btn-personalizado {
+    width: 100%;
+  }
+  #servicos .btn-personalizado {
+    text-align: center;
+    width: 40%;
+  }
+}
+
+@keyframes destaque {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+
+  70% {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+  }
+
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+@keyframes shine {
+  100% {
+    left: 125%;
+  }
 }

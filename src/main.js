@@ -58,21 +58,57 @@ document.addEventListener("DOMContentLoaded", function () {
   observer.observe(carouselSection);
 
   /* Header */
-
   const toggleButton = document.getElementById("menu-toggle");
   const menu = document.getElementById("menu");
-
-  toggleButton.addEventListener("click", () => {
-    menu.classList.toggle("hidden");
-  });
-
+  const itemMenu = menu.querySelectorAll("li");
+  const overlay = document.getElementById("menu-overlay");
   const navbar = document.getElementById("navbar");
+
   const SCROLL_LIMIT = 20;
   const DESKTOP_WIDTH = 992;
 
+  /* --- MENU MOBILE --- */
+  toggleButton.addEventListener("click", () => {
+    const isOpen = !menu.classList.contains("hidden");
+
+    if (isOpen) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+
+  overlay.addEventListener("click", closeMenu);
+
+  itemMenu.forEach((item) => {
+    item.addEventListener("click", closeMenu);
+  });
+
+  function openMenu() {
+    menu.classList.remove("hidden");
+    overlay.classList.remove("hidden");
+    overlay.classList.remove("opacity-0");
+    document.body.classList.add("overflow-hidden");
+  }
+
+  function closeMenu() {
+    menu.classList.add("hidden");
+    overlay.classList.add("opacity-0");
+    setTimeout(() => overlay.classList.add("hidden"), 300);
+    document.body.classList.remove("overflow-hidden");
+  }
+
+  /* --- NAVBAR SCROLL --- */
   updateNavbar();
+
   window.addEventListener("scroll", updateNavbar, { passive: true });
-  window.addEventListener("resize", updateNavbar);
+  window.addEventListener("resize", () => {
+    updateNavbar();
+
+    if (window.innerWidth >= DESKTOP_WIDTH) {
+      closeMenu();
+    }
+  });
 
   function updateNavbar() {
     const isDesktop = window.innerWidth >= DESKTOP_WIDTH;
@@ -95,14 +131,29 @@ document.addEventListener("DOMContentLoaded", function () {
 
   beneficios.forEach((beneficio) => {
     beneficiosContainer.innerHTML += `
-       <div class="bg-white-ice p-6 rounded-lg shadow text-center">
-        <div class="bg-blue text-white-ice w-[70px] h-[70px] mx-auto rounded-full flex items-center justify-center mb-4">
-          <img src="/assets/icons/beneficios/0${beneficio.id}.svg" alt="Icone ${beneficio.title}" loading = "lazy">
-        </div>
-        <h3 class="font-semibold text-lg mb-2">${beneficio.title}</h3>
-        <p class="text-black-text text-sm">${beneficio.description}</p>
+    <div class="group bg-white-ice p-6 rounded-lg shadow text-center transition-all duration-300 hover:bg-blue cursor-pointer">
+      <div class="bg-blue text-white-ice w-[70px] h-[70px] mx-auto rounded-full flex items-center justify-center mb-4 transition-all duration-300 group-hover:bg-white-ice">
+        <img 
+          src="/assets/icons/beneficios/0${beneficio.id}.svg"
+          alt="Ícone padrão ${beneficio.title}"
+          class="block group-hover:hidden transition-all duration-500"
+          loading="lazy"
+        >
+        <img 
+          src="/assets/icons/beneficios/0${beneficio.id}-destaque.svg"
+          alt="Ícone destaque ${beneficio.title}"
+          class="hidden group-hover:block transition-all duration-500"
+          loading="lazy"
+        >
       </div>
-    `;
+      <h3 class="font-semibold text-lg mb-2 text-black-text transition-all duration-300 group-hover:text-white-ice">
+        ${beneficio.title}
+      </h3>
+      <p class="text-black-text text-sm transition-all duration-300 group-hover:text-white-ice">
+        ${beneficio.description}
+      </p>
+    </div>
+  `;
   });
 
   const tecnologias = data.tecnologias;
@@ -111,7 +162,7 @@ document.addEventListener("DOMContentLoaded", function () {
   tecnologias.forEach((tecnologia) => {
     tecnologiasContainer.innerHTML += `
         <div>
-          <img src="/assets/icons/tecnologias/0${tecnologia.id}.svg" alt="Icone ${tecnologia.alt}" loading = "lazy">
+          <img src="/assets/icons/tecnologias/0${tecnologia.id}.svg" alt="Icone ${tecnologia.alt}" loading="lazy">
         </div>
       
     `;
@@ -126,7 +177,7 @@ document.addEventListener("DOMContentLoaded", function () {
       <img src="/assets/images/servicos/0${servico.id}.webp" alt="${servico.title}" loading="lazy">
       <div class="card-overlay"></div>
       <div class="absolute inset-0 flex flex-col justify-center items-center text-white p-6 transition-all duration-400 ease-in-out card-content">
-        <h3 class="text-white-ice">${servico.title}</h3>
+        <h3 class="text-white-ice text-outline">${servico.title}</h3>
         <p class="text-white-ice">
           ${servico.description}
         </p>
@@ -197,18 +248,18 @@ document.addEventListener("DOMContentLoaded", function () {
     const header = accordion.querySelector(".accordion-header");
     const content = accordion.querySelector(".accordion-content");
     const icon = header.querySelector("svg");
-    
 
     header.addEventListener("click", () => {
       const isOpen = accordion.classList.contains("open");
-     
 
       // Fecha todos os outros
       accordions.forEach((acc) => {
         acc.classList.remove("open");
         acc.querySelector(".accordion-content").style.maxHeight = null;
         acc.querySelector("svg").classList.remove("rotate-180");
-        acc.querySelector(".accordion-header").classList.remove("bg-blue-destaque");
+        acc
+          .querySelector(".accordion-header")
+          .classList.remove("bg-blue-destaque");
       });
 
       // Se este não estava aberto, abre agora
@@ -216,17 +267,17 @@ document.addEventListener("DOMContentLoaded", function () {
         accordion.classList.add("open");
         content.style.maxHeight = content.scrollHeight + "px";
         icon.classList.add("rotate-180");
-        header.classList.add("bg-blue-destaque")
+        header.classList.add("bg-blue-destaque");
       } else {
         accordion.classList.remove("open");
         content.style.maxHeight = null;
         icon.classList.remove("rotate-180");
-        header.classList.remove("bg-blue-destaque")
+        header.classList.remove("bg-blue-destaque");
       }
     });
   });
 
-   // Serve para deixar o ano dinamico no rodapé
+  // Serve para deixar o ano dinamico no rodapé
 
   const labelAno = document.querySelector("#ano");
   const anoAtual = new Date().getFullYear();
