@@ -174,7 +174,7 @@ document.addEventListener("DOMContentLoaded", function () {
   servicos.forEach((servico) => {
     servicosContainer.innerHTML += `
     <div class="relative bg-white rounded-xl overflow-hidden cursor-pointer border border-transparent transition-all duration-300 ease-in-out card-servico">
-      <img src="/assets/images/servicos/0${servico.id}.webp" alt="${servico.title}" loading="lazy">
+      <img src="#" alt="${servico.title}" loading="lazy">
       <div class="card-overlay"></div>
       <div class="absolute inset-0 flex flex-col justify-center items-center text-white p-6 transition-all duration-400 ease-in-out card-content">
         <h3 class="text-white-ice text-outline">${servico.title}</h3>
